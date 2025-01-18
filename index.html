@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        #app {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        li h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        li p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Cat Facts</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        const catFacts = [
+            {
+                "fact": "Whisker Sensitivity",
+                "description": "Cats have highly sensitive whiskers that can detect even the slightest changes in their environment, helping them navigate and hunt in the dark."
+            },
+            {
+                "fact": "Purring",
+                "description": "Cats purr for various reasons, including contentment, self-healing, and even to communicate with humans and other cats."
+            },
+            {
+                "fact": "Flexible Spine",
+                "description": "A cat's spine is extremely flexible, allowing them to twist and turn their bodies in mid-air, which is why they often land on their feet when they fall."
+            },
+            {
+                "fact": "Night Vision",
+                "description": "Cats have excellent night vision, which allows them to see in light levels six times lower than what a human needs."
+            },
+            {
+                "fact": "Grooming",
+                "description": "Cats spend a significant amount of time grooming themselves, which helps them regulate their body temperature and keep their fur clean."
+            },
+            {
+                "fact": "Communication",
+                "description": "Cats use a combination of vocalizations, body language, and scent markings to communicate with each other and with humans."
+            },
+            {
+                "fact": "Territorial Creatures",
+                "description": "Cats are territorial animals and often mark their territory with scent glands located on their face, paws, and tail."
+            },
+            {
+                "fact": "Dietary Needs",
+                "description": "Cats are obligate carnivores, meaning they require a diet high in protein and certain nutrients found only in animal flesh."
+            },
+            {
+                "fact": "Lifespan",
+                "description": "Domestic cats can live up to 15 years or more, with some reaching their 20s, depending on their health and living conditions."
+            },
+            {
+                "fact": "Unique Patterns",
+                "description": "Each cat has a unique pattern of fur, and even their nose prints are unique, much like human fingerprints."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const factsList = document.getElementById('facts-list');
+            catFacts.forEach(fact => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<h2>${fact.fact}</h2><p>${fact.description}</p>`;
+                factsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
